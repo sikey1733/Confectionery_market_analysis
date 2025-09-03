@@ -248,8 +248,7 @@ firms_conty <- function(data) {
 result_contracts <- firms_conty(result_data)
 
 
-# Функция на вход получает датафрейм, удаляет символы в названии фирмы в колонке "Фирма изготовитель"
-# Считает финансовые метрики, динамику по месяцам
+# Функция считает финансовые метрики, динамику по месяцам
 calc_metrics <- function(data, big_contract_threshold = 1e7) {
   if (is.null(data)) {
     message("Данные отсутствуют!")
@@ -391,3 +390,4 @@ for(i in seq_along(metrics_list)){
 }
 
 saveWorkbook(wb, "metrics_list.xlsx", overwrite = TRUE)
+
